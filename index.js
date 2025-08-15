@@ -209,3 +209,21 @@ bot.onText(/\/clear/, (msg) => {
 });
 
 
+bot.onText(/\/list/, async (msg) => {
+   const chatId = msg.chat.id;
+   const data = getListFromDB(); // Railway’da DB bo‘sh bo‘lishi mumkin
+   bot.sendMessage(chatId, data.join("\n"));
+});
+// /help komandasi
+bot.onText(/\/help/, (msg) => {
+  const chatId = msg.chat.id;
+  const helpMessage = "Bu bot CliniCore so‘rovnomasini to‘ldirish uchun ishlatiladi.\n\n" +
+                      "Komandalar:\n" +
+                      "/start - So‘rovnomani boshlash\n" +
+                      "/list - So‘rovnoma ishtirokchilar ro‘yxatini ko‘rish (admin)\n" +
+                      "/clear - Barcha so‘rovnomalarni o‘chirish (admin)\n" +
+                      "/help - Yordam";
+
+  bot.sendMessage(chatId, helpMessage);
+});
+
