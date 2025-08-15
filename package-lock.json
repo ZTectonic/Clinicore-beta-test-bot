@@ -1,0 +1,14 @@
+{
+  "name": "telegram-sqlite-bot",
+  "version": "1.0.0",
+  "description": "Telegram bot with SQLite database for Railway",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "node-telegram-bot-api": "^0.61.0",
+    "sqlite3": "^5.1.6"
+  }
+}
