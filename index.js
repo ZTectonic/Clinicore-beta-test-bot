@@ -2,7 +2,6 @@ require('dotenv').config();
 const TelegramBot = require('node-telegram-bot-api');
 const sqlite3 = require('sqlite3').verbose();
 
-const TelegramBot = require('node-telegram-bot-api');
 const bot = new TelegramBot(process.env.BOT_TOKEN, { polling: true });
 
 
@@ -226,4 +225,5 @@ bot.onText(/\/help/, (msg) => {
 
   bot.sendMessage(chatId, helpMessage);
 });
+
 
