@@ -2,12 +2,14 @@ require('dotenv').config();
 const TelegramBot = require('node-telegram-bot-api');
 const sqlite3 = require('sqlite3').verbose();
 
+const TelegramBot = require('node-telegram-bot-api');
+const bot = new TelegramBot(process.env.BOT_TOKEN, { polling: true });
 
 
 
 // Bot token (BotFather’dan oling)
 const token = process.env.BOT_TOKEN;
-const bot = new TelegramBot(token, { polling: true });
+
 
 // Admin Telegram ID
 const adminId = process.env.ADMIN_ID;// Adminning Telegram ID
