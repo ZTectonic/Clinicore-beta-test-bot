@@ -51,8 +51,7 @@ const questions = [
       ["Navbatlar va vaqt yetishmasligi"],
       ["Dori topish qiyinligi"],
       ["Malakali shifokor topish"],
-       ["Sog‘liqni nazorat qilish uchun vaqt yo‘qligi"],
-      ["Boshqa muammolar"]
+       ["Sog‘liqni nazorat qilish uchun vaqt yo‘qligi"]
     ], one_time_keyboard: true, resize_keyboard: true } }
   },
   {
@@ -260,4 +259,5 @@ const PORT = process.env.PORT || 3000;
 http.createServer((_, res) => res.end('Bot is running')).listen(PORT, () => {
   console.log(`🚀 Server ${PORT} portda`);
 });
+
 
